@@ -1,0 +1,73 @@
+/* SECTION */
+.prefooter {
+  padding: 70px 20px;
+  background: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+/* CONTAINER */
+.prefooter-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADING */
+.prefooter h2 {
+  font-size: 30px;
+  color: #0f172a;
+}
+
+.prefooter p {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* STATS */
+.prefooter-stats {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.stat-card {
+  background: #f8fafc;
+  padding: 25px 30px;
+  border-radius: 12px;
+  min-width: 200px;
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ICON */
+.stat-card .icon {
+  font-size: 28px;
+  color: #0d9488;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.stat-card h3 {
+  font-size: 22px;
+  color: #0f172a;
+}
+
+.stat-card span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .prefooter h2 {
+    font-size: 22px;
+  }
+}

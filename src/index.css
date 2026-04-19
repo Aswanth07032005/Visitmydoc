@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Dynamic Design System Variables */
+  --primary: #0f766e; /* Modern Teal */
+  --primary-dark: #115e59;
+  --secondary: #10b981; /* Vibrant Green */
+  --secondary-dark: #059669;
+
+  --text-dark: #0f172a;      /* Headings */
+  --text-default: #334155;   /* Normal text */
+  --text-muted: #64748b;     /* Paragraphs */
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+
+  --font-heading: "Outfit", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-default);
+  background-color: var(--bg-white);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding-top: 92px; /* Perfect offset for the premium fixed navbar */
+}
+
+/* Offset hash scrolling for fixed navbar */
+[id] {
+  scroll-margin-top: 92px;
+}
+
+/* -------------------------------
+   Global Typography System
+--------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+p {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--primary-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Base button overrides using variables */
+.btn.primary {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.btn.primary:hover {
+  background: var(--primary-dark) !important;
+}
+
+.custom-navbar .nav-links a:hover {
+  color: var(--primary) !important;
+}

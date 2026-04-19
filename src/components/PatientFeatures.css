@@ -1,0 +1,190 @@
+/* ===================== */
+/* BASE */
+/* ===================== */
+.patients {
+  padding: 90px 20px;
+  font-family: "Segoe UI", sans-serif;
+
+  background-image: url("https://cdn.prod.website-files.com/66bd394eedeb9d6ee29898c6/682f5450a046c241920c1e6f_Three%20doctors%20standing%20side%20by%20side%2C%20crossing%20their%20arms.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+/* OVERLAY (DESKTOP ONLY LOOK) */
+.patients::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* CONTAINER */
+.patients-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===================== */
+/* HEADER */
+/* ===================== */
+.patients-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.patients-header h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.patients-header p {
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+/* ===================== */
+/* GRID */
+/* ===================== */
+.patients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ===================== */
+/* CARD */
+/* ===================== */
+.patient-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 22px;
+  border-radius: 16px;
+  transition: 0.3s ease;
+  color: white;
+}
+
+.patient-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.patient-icon {
+  font-size: 26px;
+  color: #0f766e;
+  margin-bottom: 10px;
+}
+
+.patient-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.patient-card p {
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* ===================== */
+/* CTA */
+/* ===================== */
+.patients-cta {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.patients-cta h3 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.cta-btn {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #0f766e;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #0f766e;
+  transform: translateY(-2px);
+}
+
+/* ===================== */
+/* TABLET */
+/* ===================== */
+@media (max-width: 992px) {
+  .patients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===================== */
+/* MOBILE (IMPORTANT FIX) */
+/* ===================== */
+@media (max-width: 600px) {
+  /* ❌ REMOVE BACKGROUND IMAGE */
+  .patients {
+    background: #f8fafc;
+    padding: 60px 15px;
+  }
+
+  /* ❌ REMOVE DARK OVERLAY */
+  .patients::before {
+    display: none;
+  }
+
+  /* TEXT COLOR FIX */
+  .patients-header h2 {
+    color: #0f172a;
+    font-size: 24px;
+  }
+
+  .patients-header p {
+    color: #64748b;
+    font-size: 14px;
+  }
+
+  /* GRID */
+  .patients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CARD → WHITE CLEAN */
+  .patient-card {
+    background: white;
+    border: none;
+    color: #0f172a;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .patient-card p {
+    color: #64748b;
+  }
+
+  .patient-icon {
+    color: #0f766e;
+  }
+
+  /* CTA */
+  .patients-cta h3 {
+    color: #0f172a;
+    font-size: 18px;
+  }
+}

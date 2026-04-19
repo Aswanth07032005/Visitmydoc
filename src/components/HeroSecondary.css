@@ -1,0 +1,117 @@
+.hero0 {
+  padding: 80px 20px;
+  font-family: "Segoe UI", sans-serif;
+  background: #f8fafc;
+}
+
+.hero0-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* LEFT */
+.hero0-left {
+  flex: 1;
+}
+
+.hero0-left h1 {
+  font-weight: 700;
+  font-size: 42px;
+  color: #0f172a;
+}
+
+.hero0-left h1 span {
+  color: #0f766e;
+}
+
+.hero0-left p {
+  margin-top: 15px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* FEATURES */
+.hero0-features {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #334155;
+}
+
+.hero0-features span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* BUTTONS */
+.hero0-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.primary {
+  background: #0f766e;
+  color: white;
+}
+
+.primary:hover {
+  background: #0f766e;
+}
+
+.secondary {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.secondary:hover {
+  background: #0f766e;
+  color: white;
+}
+
+/* RIGHT IMAGE */
+.hero0-right {
+  flex: 1;
+  text-align: center;
+}
+
+.hero0-right img {
+  width: 100%;
+  max-width: 450px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero0-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero0-left h1 {
+    font-size: 30px;
+  }
+
+  .hero0-buttons {
+    justify-content: center;
+  }
+}
